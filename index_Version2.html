@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Games - Lizzy's Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .game-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .game-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .game-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .game-icon {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .game-title {
+            font-size: 1.8em;
+            margin-bottom: 5px;
+        }
+
+        .game-description {
+            padding: 20px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .game-features {
+            list-style: none;
+            padding: 20px;
+            background: #f8f9fa;
+            font-size: 0.9em;
+        }
+
+        .game-features li {
+            padding: 8px 0;
+            color: #555;
+            border-bottom: 1px solid #eee;
+        }
+
+        .game-features li:last-child {
+            border-bottom: none;
+        }
+
+        .game-features li:before {
+            content: "✓ ";
+            color: #667eea;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .play-btn {
+            display: inline-block;
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .play-btn:hover {
+            opacity: 0.9;
+            transform: scale(1.02);
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            margin-top: 50px;
+            opacity: 0.8;
+        }
+
+        .footer-link {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+
+        .footer-link:hover {
+            opacity: 0.7;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .game-icon {
+                font-size: 2.5em;
+            }
+
+            .game-title {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 My Games</h1>
+            <p class="subtitle">Welcome to my interactive games collection!</p>
+        </header>
+
+        <div class="games-grid">
+            <!-- Pong Game Card -->
+            <div class="game-card">
+                <div class="game-header">
+                    <div class="game-icon">🏓</div>
+                    <h2 class="game-title">Pong Game</h2>
+                </div>
+                <div class="game-description">
+                    A classic Pong game where you compete against the computer AI. Control the left paddle and try to outscore your opponent!
+                </div>
+                <ul class="game-features">
+                    <li>Mouse & Keyboard controls</li>
+                    <li>AI opponent</li>
+                    <li>Real-time scoreboard</li>
+                    <li>Smooth physics</li>
+                </ul>
+                <a href="pong.html" class="play-btn">▶️ Play Pong</a>
+            </div>
+
+            <!-- Guessing Game Card -->
+            <div class="game-card">
+                <div class="game-header">
+                    <div class="game-icon">🎯</div>
+                    <h2 class="game-title">Guessing Game</h2>
+                </div>
+                <div class="game-description">
+                    Test your guessing skills! Choose a difficulty level and try to find the secret number within the attempt limit.
+                </div>
+                <ul class="game-features">
+                    <li>3 difficulty levels</li>
+                    <li>Smart hint system</li>
+                    <li>Attempt tracking</li>
+                    <li>Responsive design</li>
+                </ul>
+                <a href="guessing-game.html" class="play-btn">▶️ Play Game</a>
+            </div>
+        </div>
+
+        <footer>
+            <p>Made with ❤️ by Lizzy | 
+                <a href="https://github.com/lizzyroset26-sys" class="footer-link" target="_blank">GitHub</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
